@@ -3,31 +3,41 @@ html,body{
     height: calc(100%-40px);
     background-color: #266352;
 }
+body{
+    display: grid;
+    grid-template-columns: 3fr 6fr 3fr;
+    grid-template-rows: 150px auto auto auto;
+    
+}
 div{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
+    height: auto;
     font-size: 22px;
-    margin-top: 10px;
-    margin-right: 10px;
-    border: 5px solid #f7db6a;
-    border-radius: 17px;
-    background: #53c0a2;
+    font-weight: bolder;
+    background-color: rgb(18, 104, 104);
+    border: 5px solid #c5b207;
+    color: yellow;
 }
-p{
-    opacity: 0;
+.d8{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 5;
 }
-body{
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
-    
+.d1{
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 5;
+    z-index: 1;
 }
-
-div:hover{
-    border: 5px solid red;
-    transform: scale(115%);
-}
-p:hover{
-    opacity: 1;
+.d6{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:  4;
+    grid-row-end: 5;
+    z-index: 2;
 }
